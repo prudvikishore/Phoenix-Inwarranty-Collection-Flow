@@ -33,6 +33,7 @@ jobs:
              -r cli,htmlextra
             
       - name: Newman Report
+        if: always() #Ensures that it always generates the report irrespective of failures in tests
         uses: actions/upload-artifact@v6.0.0
         with:
           name: Newman Report
