@@ -28,7 +28,8 @@ jobs:
              newman run 'InWarranty-Flow Collection.postman_collection.json' \
              -e QA.postman_environment.json \
              -d testData.csv \
-             -r cli,htmlextra
+             -r cli,htmlextra \
+             --reporter-htmlextra-export ./newman/index.html
             
       - name: Newman Report
         if: always() #Ensures that it always generates the report irrespective of failures in tests
