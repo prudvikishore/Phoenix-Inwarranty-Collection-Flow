@@ -5,10 +5,10 @@ on:
     branches: [main]
   workflow_dispatch:
   schedule:
-    - cron: 30 6 * * 1
+    - cron: 30 2 * * 0
 jobs:
   run-postman-tests:
-    runs-on: ec2-githubrunner
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout the code
         uses: actions/checkout@v6.0.2
